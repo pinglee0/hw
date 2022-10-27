@@ -1,0 +1,84 @@
+1
+class lab1 {
+    public static int countFactors(int num){
+        int i=2;
+        int count=0;
+        while(i<num){
+            if(num%i==0)
+                count++;
+            i++;
+        }
+        return count;
+    }
+    public static boolean isPrime(int num){
+        return countFactors(num)==0;
+    }
+    public static void main(String[] args){
+
+        int count=0,i=2;
+        while(i<1000){
+            if(isPrime(i))
+                System.out.println(i);
+                count++;
+            i++;
+        }
+        System.out.println("There are "+count+" primes are less than 1000");
+    }
+}
+
+
+2
+class lab2{
+    public static void fourHeads (){
+        int count=0;;
+        int randnum;
+        while(count<4){
+            randnum=(int)(Math.random()*2);
+            if(randnum==1){
+                count++;
+                System.out.print("H ");
+            }
+            else{
+                count=0;
+                System.out.print("T ");
+            }
+        }
+        System.out.println("\nFour heads in a row!");
+    }
+    public static void main(String[] args){
+        fourHeads ();
+        fourHeads ();
+        fourHeads ();
+    }
+}
+3
+class lab3{
+    public static void printTwoDigit(int n){
+        boolean a=false;
+        int num;
+        for(int i=0;i<n;i++){
+            num=(int)(10*Math.random()+10);
+            System.out.println("next= "+num);
+            if(num==13)
+                a=true;
+        }
+        if(a)
+            System.out.println("we saw a 13");
+        else
+            System.out.println("no 13 was seen");
+    }
+    public static void main(String[] args){
+        printTwoDigit(7);
+    }
+}
+4
+    public static void multiplicationTable  (int n){
+        boolean a=false;
+        int num;
+        for(int i=0;i<n;i++){
+            for(int j=1;j<=10;j++){
+                System.out.print((i+1)*j+"\t");
+            }
+            System.out.print("\n");
+        }
+    }

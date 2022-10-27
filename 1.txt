@@ -1,0 +1,26 @@
+1
+class lab1 {
+    public static void main(String[] args) {
+         System.out.println("JAVA is a programming language.");
+        System.out.println( "Basic Java syntax.");
+    }
+}
+2
+class lab2{
+    public static void main(String[] args)   {
+        boolean isTure =false;
+        double money=9.99;
+        System.out.print(money);
+        System.out.println(isTure);
+    }
+}
+3
+class lab3 {
+    public static void main(String[] args){
+        int a1=78,a2=80,a3=77;
+        double average=(double)(a1+a2+a3)/3;
+        double variance=(Math.pow(a1-average,2)+Math.pow(a2-average,2)+Math.pow(a3-average,2))/3;
+        double deviation=Math.sqrt(variance);
+        System.out.println(average+"\n"+variance+"\n"+deviation);
+    }
+}
