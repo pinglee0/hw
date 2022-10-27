@@ -1,0 +1,42 @@
+1
+#Circle.java 
+public class Circle {
+    private int x;
+    private int y;
+    private double radius;
+    public Circle(){
+        x = 0;
+        y = 0;
+        radius=1;
+    }
+    public Circle(int xValue, int yValue,double rValue){
+        x = xValue;
+        y = yValue;
+        radius=rValue;
+    }
+    public double getArea(){
+        return Math.PI*Math.pow(radius,2);
+    }
+    public boolean isInCircle(int a, int b){
+        return Math.pow(a-x,2)+Math.pow(b-y,2)<Math.pow(radius,2);
+    }
+    public void translate(int dx, int dy){
+        x+=dx;
+        y+=dy;
+    }
+    public void tripleTheRadius(){
+        radius*=3;
+    }
+}
+#Main.java 
+public class Main {
+public static void main(String[] args){
+    Circle c1=new Circle();
+    Circle c2=new Circle(2,2,3);
+    System.out.println(c1.getArea()+" "+c1.isInCircle(1,1));
+    c1.translate(2,2);
+    c1.tripleTheRadius();
+    System.out.println(c1.getArea()+" "+c1.isInCircle(3,3));
+    Math.sqrt(9);
+}
+}
